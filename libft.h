@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbaaloua <rbaaloua@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rbaaloua <rbaaloua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 16:48:58 by rbaaloua          #+#    #+#             */
-/*   Updated: 2024/10/30 19:30:47 by rbaaloua         ###   ########.fr       */
+/*   Updated: 2024/10/31 00:06:10 by rbaaloua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <fcntl.h>
+# include <limits.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);

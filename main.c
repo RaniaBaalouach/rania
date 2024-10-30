@@ -585,21 +585,6 @@
 
 
 
-// int main(void)
-// {
-//     char s1[] = "   Hello, World!   ";
-//     char set[] = " ";
-//     char *result;
-
-//     result = ft_strtrim(s1, set);
-   
-//     printf("%s\n", s1);
-//     printf("%s\n", result);
-//     free(result);
-//     return 0;
-// }
-
-
 
 
 // int main()
@@ -694,6 +679,224 @@
 //     printf("Testing NULL string...\n");
 //     ft_striteri(NULL, to_uppercase);
 //     printf("NULL test complete\n");
+
+//     return (0);
+// }
+
+
+
+
+
+// int main(void)
+// {
+//     // Test 1: Write to standard output (fd = 1)
+//     ft_putchar_fd('A', 1);  // Expected: Prints 'A' to standard output
+
+//     // Test 2: Write to standard error (fd = 2)
+//     ft_putchar_fd('B', 2);  // Expected: Prints 'B' to standard error
+
+//     // Test 4: Invalid file descriptor
+//     ft_putchar_fd('D', -1); // Expected: Nothing happens, as fd is invalid
+
+//     return 0;
+// }
+
+
+
+
+// int main(void)
+// {
+//     // Test different file descriptors
+//     printf("Testing stdout (fd=1):\n");
+//     ft_putstr_fd("Hello to stdout\n", 1);
+
+//     printf("\nTesting file write:\n");
+//     int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+//     if (fd != -1)
+//     {
+//         ft_putstr_fd("Hello to file\n", fd);
+//         close(fd);
+//     }
+
+//     printf("\nTesting error cases:\n");
+//     // Test NULL
+//     printf("Testing NULL string:\n");
+//     ft_putstr_fd(NULL, 1);
+//     printf("NULL test complete\n");
+
+//     // Test invalid fd
+//     printf("\nTesting invalid fd:\n");
+//     ft_putstr_fd("This shouldn't print", -1);
+//     printf("Invalid fd test complete\n");
+
+//     // Test empty string
+//     printf("\nTesting empty string:\n");
+//     ft_putstr_fd("", 1);
+//     printf("Empty string test complete\n");
+
+//     return (0);
+// }
+
+
+
+
+// int main(void)
+// {
+//     int fd;
+//     char buffer[256];
+//     ssize_t bytes_read;
+
+//     // Test 1: Standard output
+//     printf("=== Test 1: Writing to stdout ===\n");
+//     ft_putendl_fd("Hello World", 1);
+//     ft_putendl_fd("Second line", 1);
+//     printf("Above lines should have newlines automatically\n\n");
+
+//     // Test 2: Writing to file and verifying
+//     printf("=== Test 2: Writing to file ===\n");
+//     fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+//     if (fd != -1)
+//     {
+//         ft_putendl_fd("First line", fd);
+//         ft_putendl_fd("Second line", fd);
+//         ft_putendl_fd("Third line", fd);
+//         close(fd);
+
+//         // Read and verify file contents
+//         fd = open("test.txt", O_RDONLY);
+//         bytes_read = read(fd, buffer, 255);
+//         buffer[bytes_read] = '\0';
+//         printf("File contents:\n%s", buffer);
+//         close(fd);
+//     }
+
+//     // Test 3: Empty string
+//     printf("\n=== Test 3: Empty string ===\n");
+//     ft_putendl_fd("", 1);
+//     printf("Above should show just a newline\n\n");
+
+//     // Test 4: NULL string (should handle safely)
+//     printf("=== Test 4: NULL string ===\n");
+//     ft_putendl_fd(NULL, 1);
+//     printf("NULL string test complete\n\n");
+
+//     // Test 5: Invalid fd
+//     printf("=== Test 5: Invalid fd ===\n");
+//     ft_putendl_fd("This should not be written", -1);
+//     printf("Invalid fd test complete\n\n");
+
+//     // Test 6: String with special characters
+//     printf("=== Test 6: Special characters ===\n");
+//     ft_putendl_fd("Tab\there\nNewline\tTest", 1);
+//     printf("Above line should have a newline at the end\n\n");
+
+//     // Test 7: Multiple sequential writes to file
+//     printf("=== Test 7: Multiple sequential writes ===\n");
+//     fd = open("test_multiple.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+//     if (fd != -1)
+//     {
+//         ft_putendl_fd("Line 1", fd);
+//         ft_putendl_fd("Line 2", fd);
+//         ft_putendl_fd("Line 3", fd);
+//         close(fd);
+
+//         // Read and verify
+//         fd = open("test_multiple.txt", O_RDONLY);
+//         bytes_read = read(fd, buffer, 255);
+//         buffer[bytes_read] = '\0';
+//         printf("Multiple writes file contents:\n%s", buffer);
+//         close(fd);
+//     }
+
+//     return (0);
+// }
+
+
+
+
+
+
+// int main(void)
+// {
+//     int fd;
+//     char buffer[100];
+
+//     // Test 1: Standard numbers to stdout
+//     printf("\n=== Test 1: Standard numbers ===\n");
+//     ft_putnbr_fd(42, 1);
+//     write(1, "\n", 1);
+//     ft_putnbr_fd(-42, 1);
+//     write(1, "\n", 1);
+//     ft_putnbr_fd(0, 1);
+//     write(1, "\n", 1);
+
+//     // Test 2: Writing to file
+//     printf("\n=== Test 2: Writing to file ===\n");
+//     fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+//     if (fd != -1)
+//     {
+//         ft_putnbr_fd(12345, fd);
+//         ft_putchar_fd('\n', fd);
+//         ft_putnbr_fd(-12345, fd);
+//         ft_putchar_fd('\n', fd);
+//         close(fd);
+
+//         // Read and verify file contents
+//         fd = open("test.txt", O_RDONLY);
+//         int bytes_read = read(fd, buffer, 99);
+//         buffer[bytes_read] = '\0';
+//         printf("File contents:\n%s", buffer);
+//         close(fd);
+//     }
+
+//     // Test 3: Edge cases
+//     printf("\n=== Test 3: Edge cases ===\n");
+//     printf("INT_MAX: ");
+//     ft_putnbr_fd(INT_MAX, 1);
+//     printf("\nINT_MIN: ");
+//     ft_putnbr_fd(INT_MIN, 1);
+//     printf("\n");
+
+//     // Test 4: Invalid fd
+//     printf("\n=== Test 4: Invalid fd ===\n");
+//     ft_putnbr_fd(42, -1);
+//     printf("Invalid fd test complete\n");
+
+//     // Test 5: Sequential numbers
+//     printf("\n=== Test 5: Sequential numbers ===\n");
+//     for (int i = -5; i <= 5; i++)
+//     {
+//         ft_putnbr_fd(i, 1);
+//         write(1, " ", 1);
+//     }
+//     write(1, "\n", 1);
+
+//     // Test 6: Large numbers
+//     printf("\n=== Test 6: Large numbers ===\n");
+//     ft_putnbr_fd(123456789, 1);
+//     write(1, "\n", 1);
+//     ft_putnbr_fd(-123456789, 1);
+//     write(1, "\n", 1);
+
+//     // Test 7: Multiple writes to file
+//     printf("\n=== Test 7: Multiple writes to file ===\n");
+//     fd = open("test_numbers.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+//     if (fd != -1)
+//     {
+//         for (int i = 0; i < 10; i++)
+//         {
+//             ft_putnbr_fd(i * i, fd);
+//             ft_putchar_fd('\n', fd);
+//         }
+//         close(fd);
+
+//         // Read and verify
+//         fd = open("test_numbers.txt", O_RDONLY);
+//         int bytes_read = read(fd, buffer, 99);
+//         buffer[bytes_read] = '\0';
+//         printf("Square numbers file contents:\n%s", buffer);
+//         close(fd);
+//     }
 
 //     return (0);
 // }
