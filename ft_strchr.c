@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbaaloua <rbaaloua@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rbaaloua <rbaaloua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 00:22:49 by rbaaloua          #+#    #+#             */
-/*   Updated: 2024/10/30 20:17:05 by rbaaloua         ###   ########.fr       */
+/*   Updated: 2024/10/30 23:10:44 by rbaaloua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == '\0')
+	if (s[i] == (char)c)
 		return ((char *)(s + i));
 	return (NULL);
 }

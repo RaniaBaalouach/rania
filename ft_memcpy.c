@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbaaloua <rbaaloua@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rbaaloua <rbaaloua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:48:08 by rbaaloua          #+#    #+#             */
-/*   Updated: 2024/10/29 21:32:28 by rbaaloua         ###   ########.fr       */
+/*   Updated: 2024/10/30 23:12:20 by rbaaloua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!d && !s)
 		return (NULL);
+	i = 0;
 	while (i < n)
 	{
 		d[i] = s[i];

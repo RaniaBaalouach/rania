@@ -585,16 +585,19 @@
 
 
 
-int main()
-{
-    char *s1 = "555Hello ]\\ 1235555";
-    char *set = "532";
-    char *trimmed_str;
+// int main(void)
+// {
+//     char s1[] = "   Hello, World!   ";
+//     char set[] = " ";
+//     char *result;
 
-    trimmed_str = ft_strtrim(s1, set);
-
-    return (0);
-}
+//     result = ft_strtrim(s1, set);
+   
+//     printf("%s\n", s1);
+//     printf("%s\n", result);
+//     free(result);
+//     return 0;
+// }
 
 
 
