@@ -587,6 +587,68 @@
 
 
 
+
+
+
+
+// static void	print_result(char **result)
+// {
+// 	int	i;
+
+// 	if (!result)
+// 	{
+// 		printf("NULL result\n");
+// 		return ;
+// 	}
+// 	i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("[%d]: '%s'\n", i, result[i]);
+// 		i++;
+// 	}
+// 	printf("---\n");
+// }
+
+// static void	free_result(char **result)
+// {
+// 	int	i;
+
+// 	if (!result)
+// 		return ;
+// 	i = 0;
+// 	while (result[i])
+// 	{
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// }
+
+// int	main(void)
+// {
+// 	char	**res;
+
+// 	printf("Test 1: Basic split\n");
+// 	res = ft_split("hello world test", ' ');
+// 	print_result(res);
+// 	free_result(res);
+// 	printf("\nTest 2: Multiple spaces\n");
+// 	res = ft_split("  multiple     spaces  ", ' ');
+// 	print_result(res);
+// 	free_result(res);
+// 	printf("\nTest 3: Empty string\n");
+// 	res = ft_split("", ' ');
+// 	print_result(res);
+// 	free_result(res);
+// 	return (0);
+// }
+
+
+
+
+
+
+
 // int main()
 // {
 //     printf("Testing ft_itoa:\n");

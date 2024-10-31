@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbaaloua <rbaaloua@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rbaaloua <rbaaloua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:19:49 by rbaaloua          #+#    #+#             */
-/*   Updated: 2024/10/30 19:38:38 by rbaaloua         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:11:50 by rbaaloua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void ft_putendl_fd(char *s, int fd)
 {
-    int i;
-    
     if (fd < 0 || !s)
         return ;
     write(fd, s, ft_strlen(s));

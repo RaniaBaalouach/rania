@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbaaloua <rbaaloua@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rbaaloua <rbaaloua@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 22:49:54 by rbaaloua          #+#    #+#             */
-/*   Updated: 2024/10/30 17:21:47 by rbaaloua         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:11:12 by rbaaloua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char *new_str;
 	size_t len1;
 	size_t len2;
-	size_t i;
 
 	if (!s1 || !s2)
 		return (NULL);
